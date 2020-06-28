@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.demo.cn.edu.tit.mapper.StatisticsMapper">
+
+    <!-- 获取今日申报总数 -->
+    <select id="todayDecCount" resultType="long">
+        select count(1) from tra_record where  create_time &gt;= #{dayStart} and create_time &lt; #{dayEnd}
+    </select>
+
+    <!-- 获取今日申报总数 -->
+    <select id="findTodayUser" resultType="long">
+        select count(distinct(user_id)) from tra_record  create_time &gt;= #{dayStart} and create_time &lt; #{dayEnd}
+    </select>
+</mapper>
