@@ -366,9 +366,9 @@ public class TraRecordController extends JeecgController<TraRecord, ITraRecordSe
      */
 
 
-    /**@RequestMapping(value = "/importExcel", method = RequestMethod.POST)
+    @RequestMapping(value = "/importExcel", method = RequestMethod.POST)
     public Result<?> importExcel(HttpServletRequest request, HttpServletResponse response) {
         return super.importExcel(request, response, TraRecord.class);
-    }**/
+    }
 
 }
